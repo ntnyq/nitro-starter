@@ -17,7 +17,9 @@
     "nano-staged": "^0.8.0",
     "nitropack": "latest"
   },
-  "dependencies": {},
+  "dependencies": {
+    "consola": "^3.4.0"
+  },
   "nano-staged": {
     "*": "biome format --write"
   }
