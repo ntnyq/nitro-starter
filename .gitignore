@@ -1,0 +1,13 @@
+.DS_Store
+node_modules
+*.log*
+*.local
+
+dist
+.data
+.nitro
+.cache
+.output
+.env
+
+.vercel
