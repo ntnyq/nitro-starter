@@ -10,7 +10,13 @@
     }
   },
   "files": {
-    "ignore": ["**/node_modules/**", "**/dist/**", "**/.nitro/**", "**/.output/**", "bun.lock"],
+    "includes": [
+      "!**/node_modules/**",
+      "!**/dist/**",
+      "!**/.nitro/**",
+      "!**/.output/**",
+      "!bun.lock"
+    ],
     "ignoreUnknown": true
   },
   "formatter": {
@@ -20,7 +26,8 @@
     "indentStyle": "space",
     "indentWidth": 2,
     "lineEnding": "lf",
-    "lineWidth": 80
+    "lineWidth": 80,
+    "useEditorconfig": true
   },
   "javascript": {
     "formatter": {
@@ -54,7 +61,6 @@
       "recommended": true,
       "security": { "noGlobalEval": "error" },
       "style": {
-        "noVar": "error",
         "useBlockStatements": "off",
         "useConst": "error",
         "useNamingConvention": {
@@ -68,9 +74,6 @@
         "useNamespaceKeyword": "error"
       }
     }
-  },
-  "organizeImports": {
-    "enabled": true
   },
   "overrides": [],
   "vcs": {

@@ -1,26 +1,33 @@
 {
   "name": "nitro-stater",
+  "type": "module",
   "private": true,
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "build": "nitro build",
     "dev": "nitro dev",
+    "deploy": "bun run src/utils/deploy.ts",
     "prepare": "husky && nitro prepare",
     "preview": "node .output/server/index.mjs",
     "check": "biome check",
+    "start": "bun run src/index.ts",
     "format": "biome format --write"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
+    "@biomejs/biome": "^2.1.2",
+    "@types/node": "^24.1.0",
     "husky": "^9.1.7",
     "nano-staged": "^0.8.0",
     "nitropack": "latest"
   },
   "dependencies": {
-    "consola": "^3.4.0"
+    "@discordjs/core": "^2.2.0",
+    "consola": "^3.4.2",
+    "discord.js": "^14.21.0",
+    "zod": "^4.0.5"
   },
   "nano-staged": {
-    "*": "biome format --write"
+    "*.{js,ts,mjs,md,yml,yaml}": "biome format --write"
   }
 }
